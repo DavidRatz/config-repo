@@ -1,6 +1,7 @@
 spring:
   cloud:
       consul:
+        host: consul
         discovery:
           service-name: ${spring.application.name}
           instance-id: ${spring.application.name}:${random.uuid}
