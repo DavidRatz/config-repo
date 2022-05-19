@@ -1,4 +1,4 @@
 spring:
   cloud:
     consul:
-      host: consul
+      host: consul-server
