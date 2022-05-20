@@ -1,12 +1,24 @@
 server:
   port: 8181
 spring:
-  # cloud:
+  cloud:
   #   consul:
   #     host: localhost
   #     port: 8500
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: david
-    password: pass
+    stream:
+      binders:
+        rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: david
+                password: pass
+                virtual-host: /
+  # rabbitmq:
+  #   host: localhost
+  #   port: 5672
+  #   username: david
+  #   password: pass
